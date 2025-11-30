@@ -1,18 +1,19 @@
-// This file contains intentional linting violations to demonstrate the CI workflow
+// This file demonstrates proper linting compliance after fixing violations
 
-const unusedVariable = "This variable is never used"
+const exampleVariable = 'This variable is now used';
+console.log(exampleVariable);
 
-function badFunction() {
-  console.log("Double quotes instead of single quotes")
+function goodFunction() {
+  console.log('Single quotes instead of double quotes');
   
-  let x = 5  // Missing semicolon
+  let x = 5;  // Added semicolon
   
-  if (x == "5") {  // Using == instead of ===
-    return true
+  if (x === 5) {  // Using === instead of ==
+    return true;
   }
 }
 
-// More violations
-var oldVar = "Using var instead of let/const"
+// Using const instead of var
+const newVar = 'Using const instead of var';
 
-badFunction()
+goodFunction();
